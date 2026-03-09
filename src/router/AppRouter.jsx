@@ -7,13 +7,15 @@ import Products from "../pages/Products";
 import Settings from "../pages/Settings";
 import Users from "../pages/Users";
 
+import "../styles/layout.css"
+
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <div>
+      <div className="layout-container">
         <Sidebar />
-        <div>
+        <div className="main-container">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
