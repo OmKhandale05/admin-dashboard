@@ -30,3 +30,11 @@
 .users-table tr:hover{
     background: #f9fafb;
 }
+
+.search-input{
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
