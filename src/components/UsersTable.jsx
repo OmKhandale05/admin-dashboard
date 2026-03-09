@@ -1,20 +1,9 @@
 import "../styles/UsersTable.css";
-import { users as initialUsers } from "../data/users";
-import { useState } from "react";
+import useUsers from "../hooks/useUsers";
 
 const UsersTable = () => {
-  const [search, setSearch] = useState("");
-  const [userList, setUserList] = useState(initialUsers);
-
-  const filteredUsers = userList.filter((user) =>
-    user.name.toLowerCase().includes(search.toLowerCase())
-  );
-
-  const deleteUser = (id)=>{
-    const updatedUsers = userList.filter((user) => user.id !== id);
-    setUserList(updatedUsers);
-  };
-
+  
+const {search, setSearch, filteredUsers, deleteUser} = useUsers();
   return (
     <div className="table-container">
       <h3 className="table-title">Recent Users</h3>
