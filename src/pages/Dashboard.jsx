@@ -1,5 +1,6 @@
 import RevenueChart from "../components/RevenueChart";
 import StatCard from "../components/StatCard";
+import UsersTable from "../components/UsersTable";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
@@ -15,6 +16,8 @@ const Dashboard = () => {
 
       </div>
       <RevenueChart/>
+
+      <UsersTable/>
     </div>
   );
 };

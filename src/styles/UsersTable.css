@@ -1,0 +1,32 @@
+.table-container{
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.table-title{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.users-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-table th{
+    background: #f3f4f6;
+}
+
+.users-table tr:hover{
+    background: #f9fafb;
+}
