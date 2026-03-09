@@ -1,3 +1,4 @@
+import RevenueChart from "../components/RevenueChart";
 import StatCard from "../components/StatCard";
 import "../styles/Dashboard.css";
 
@@ -12,8 +13,8 @@ const Dashboard = () => {
         <StatCard title="Revenue" value="$8,200"/>
         <StatCard title="Active Devices" value="85"/>
 
-
       </div>
+      <RevenueChart/>
     </div>
   );
 };

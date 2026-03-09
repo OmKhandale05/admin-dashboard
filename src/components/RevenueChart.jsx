@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts"
+import "../styles/Charts.css"
 
 const data = [
     { month: "Jan", revenue: 4000 },
