@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Table from "../components/Table";
 import { users } from "../data/users";
+import Modal from "../components/Modal";
+import "../styles/Users.css"
+
+
 
 const Users = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const columns = [
     { header: "ID", accessor: "id"},
@@ -13,7 +20,19 @@ const Users = () => {
     <div>
       <h1>Users</h1>
 
+      <button className="add-btn" onClick={() => setIsOpen(true)}>Add User</button>
+
       <Table columns={columns} data ={users}/>
+
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <h2>Add User</h2>
+
+        <input placeholder="Name"/>
+        <input placeholder="Email"/>
+        <input placeholder="Role"/>
+
+        <button>Add</button>
+      </Modal>
     </div>
   );
 };
