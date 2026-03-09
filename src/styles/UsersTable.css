@@ -71,3 +71,23 @@
     margin-right: 5px;
     cursor: pointer;
 }
+
+.pagination{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button{
+    padding: 6px 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover{
+    background: #1d4ed8;
+}

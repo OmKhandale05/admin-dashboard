@@ -1,5 +1,6 @@
 import "../styles/UsersTable.css";
 import useUsers from "../hooks/useUsers";
+import usePagination from "../hooks/usePagination";
 
 const UsersTable = () => {
   const {
@@ -13,6 +14,8 @@ const UsersTable = () => {
     handleChange,
     saveEdit,
   } = useUsers();
+
+  const { currentItem, currentPage, totalPages, nextPage, prevPage} = usePagination(filteredUsers, 5);
   return (
     <div className="table-container">
       <h3 className="table-title">Recent Users</h3>
@@ -36,7 +39,7 @@ const UsersTable = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredUsers.map((user) => (
+          {currentItem.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>
@@ -96,6 +99,15 @@ const UsersTable = () => {
           ))}
         </tbody>
       </table>
+      <div className="pagination">
+        <button onClick={prevPage}>Previous</button>
+        <span>
+            Page {currentPage} of {totalPages}
+        </span>
+
+        <button onClick={nextPage}>Next</button>
+
+      </div>
     </div>
   );
 };
