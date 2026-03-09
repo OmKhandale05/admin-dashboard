@@ -2,8 +2,17 @@ import "../styles/UsersTable.css";
 import useUsers from "../hooks/useUsers";
 
 const UsersTable = () => {
-  
-const {search, setSearch, filteredUsers, deleteUser} = useUsers();
+  const {
+    search,
+    setSearch,
+    filteredUsers,
+    deleteUser,
+    editingUserID,
+    editForm,
+    startEdit,
+    handleChange,
+    saveEdit,
+  } = useUsers();
   return (
     <div className="table-container">
       <h3 className="table-title">Recent Users</h3>
@@ -30,13 +39,57 @@ const {search, setSearch, filteredUsers, deleteUser} = useUsers();
           {filteredUsers.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.role}</td>
               <td>
-                <button className="delete-btn"
-                onClick={()=> deleteUser(user.id)}>
-                    Delete
+                {editingUserID === user.id ? (
+                  <input
+                    name="name"
+                    value={editForm.name}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  user.name
+                )}
+              </td>
+
+              <td>
+                {editingUserID === user.id ? (
+                  <input
+                    name="email"
+                    value={editForm.email}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  user.email
+                )}
+              </td>
+
+              <td>
+                {editingUserID === user.id ? (
+                  <input
+                    name="role"
+                    value={editForm.role}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  user.role
+                )}
+              </td>
+
+              <td>
+                {editingUserID === user.id ? (
+                  <button className="save-btn" onClick={saveEdit}>
+                    Save
+                  </button>
+                ) : (
+                  <button className="edit-btn" onClick={() => startEdit(user)}>
+                    Edit
+                  </button>
+                )}
+                <button
+                  className="delete-btn"
+                  onClick={() => deleteUser(user.id)}
+                >
+                  Delete
                 </button>
               </td>
             </tr>
