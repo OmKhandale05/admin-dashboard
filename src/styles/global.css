@@ -13,3 +13,16 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+ul{
+    list-style: none;
+}
+
+.app-layout{
+    display: flex;
+}
+
+.main-content{
+    flex: 1;
+    padding: 20px;
+}
