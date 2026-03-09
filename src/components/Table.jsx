@@ -1,6 +1,6 @@
 import "../styles/Table.css"
 
-const Table = ({ columns, data, actions }) => {
+const Table = ({ columns=[], data=[], actions }) => {
   return (
     <table className="table">
       <thead>
