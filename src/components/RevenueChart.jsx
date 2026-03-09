@@ -1,16 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts"
 import "../styles/Charts.css"
-
-const data = [
-    { month: "Jan", revenue: 4000 },
-    { month: "Feb", revenue: 3000 },
-    { month: "Mar", revenue: 5000 },
-    { month: "Apr", revenue: 4700 },
-    { month: "May", revenue: 5890 },
-    { month: "Jun", revenue: 6390 },
-    { month: "Jul", revenue: 7490 }
-
-];
+import { revenueData } from "../data/revenueData";
 
 const RevenueChart = () => {
     return ( 
@@ -18,7 +8,7 @@ const RevenueChart = () => {
             <h3 className="chart-title">Revenue Overview</h3>
 
             <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={data}>
+                <LineChart data={revenueData}>
                     <CartesianGrid strokeDasharray="3 3"/>
                     <XAxis dataKey="month"/>
                     <YAxis/>
