@@ -1,13 +1,19 @@
 import "../styles/UsersTable.css";
-import { users } from "../data/users";
+import { users as initialUsers } from "../data/users";
 import { useState } from "react";
 
 const UsersTable = () => {
   const [search, setSearch] = useState("");
+  const [userList, setUserList] = useState(initialUsers);
 
-  const filteredUsers = users.filter((user) =>
+  const filteredUsers = userList.filter((user) =>
     user.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  const deleteUser = (id)=>{
+    const updatedUsers = userList.filter((user) => user.id !== id);
+    setUserList(updatedUsers);
+  };
 
   return (
     <div className="table-container">
@@ -28,6 +34,7 @@ const UsersTable = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +44,12 @@ const UsersTable = () => {
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.role}</td>
+              <td>
+                <button className="delete-btn"
+                onClick={()=> deleteUser(user.id)}>
+                    Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
