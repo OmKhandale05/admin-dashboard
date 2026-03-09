@@ -22,3 +22,34 @@
 .table tr:hover{
     background: #f9fafb;
 }
+
+.table-actions{
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn{
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn{
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover{
+    background: #1d4ed8;
+}
+
+.delete-btn:hover{
+    background: #dc2626;
+}
