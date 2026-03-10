@@ -15,7 +15,7 @@ const UsersTable = () => {
     saveEdit,
   } = useUsers();
 
-  const { currentItem, currentPage, totalPages, nextPage, prevPage} = usePagination(filteredUsers, 5);
+  const { currentItem, currentPage, totalPages, nextPage, prevPage} = usePagination(filteredUsers, 4);
   return (
     <div className="table-container">
       <h3 className="table-title">Recent Users</h3>
