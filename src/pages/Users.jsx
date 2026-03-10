@@ -27,8 +27,9 @@ const Users = () => {
     <div className="users-page">
       <div className="users-header">
         <h1>Users</h1>
-
-        <input
+      </div>
+      <div className="user-controls">
+      <input
           type="text"
           placeholder="Search users .."
           className="search-input"
@@ -39,7 +40,9 @@ const Users = () => {
         <button className="add-btn" onClick={() => setIsOpen(true)}>
           Add User
         </button>
+
       </div>
+      
 
       <div className="table-card">
         <Table
