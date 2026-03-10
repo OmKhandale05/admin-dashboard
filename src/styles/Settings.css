@@ -1,0 +1,39 @@
+.settings-page{
+    padding: 20px;
+}
+.settings-card{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) ;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label{
+
+font-size: 14px;
+margin-bottom: 5px;
+
+}
+
+.form-group input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.save-settings-btn{
+    background: #3563eb;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
