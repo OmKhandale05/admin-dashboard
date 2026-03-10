@@ -16,7 +16,7 @@ const Table = ({ columns=[], data=[], actions }) => {
         {data.map((row, index) => (
           <tr key={index}>
             {columns.map((col, i) => (
-              <td key={i}>{row[col.accessor]}</td>
+              <td key={i}>{col.render ? col.render(row): row[col.accessor]}</td>
             ))}
             {actions && (
                 <td className="table-actions">
