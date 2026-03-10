@@ -1,6 +1,11 @@
 .orders-page{
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+}
+
+.orders-page h1{
+    margin-bottom: 10px;
 }
 
 .status-paid{
@@ -27,3 +32,4 @@
     border-radius: 6px;
     font-size: 12px;
 }
+
