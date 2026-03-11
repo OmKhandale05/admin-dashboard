@@ -1,7 +1,7 @@
 .table{
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: var(--card);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -15,12 +15,13 @@
 }
 
 .table th{
-    background: #f3f4f6;
+    background: var(--card);
     font-weight: 600;
 }
 
 .table tr:hover{
-    background: #f9fafb;
+    background: var(--table-hover);
+    border-left: 3px solid #2563eb;
 }
 
 .table-actions{

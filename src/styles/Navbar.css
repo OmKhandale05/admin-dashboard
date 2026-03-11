@@ -1,6 +1,6 @@
 .navbar{
     height: 60px;
-    background: white;
+    background: var(--card);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,4 +24,13 @@
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 14px;
+}
+
+.theme-btn{
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
 }
